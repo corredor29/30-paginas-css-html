@@ -3,11 +3,12 @@
   font-family: 'AvenirCustom';
   src: url('../font/Avenir-Regular.ttf') format('truetype'); 
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'AvenirCustom';
+  font-family: 'AvenirCustom', sans-serif;
 }
 
 body {
@@ -24,17 +25,19 @@ body {
 }
 
 .main-title {
-  font-size: 4rem;
-  font-weight: 600%;
+  font-size: clamp(2rem, 5vw, 4rem); /* Escalable */
+  font-weight: 600;
   margin-bottom: 40px;
   text-align: justify;
 }
 
+/* Steps */
 .steps {
   display: flex;
   justify-content: space-between;
   text-align: left;
   margin-bottom: 50px;
+  gap: 20px;
 }
 
 .step {
@@ -46,7 +49,6 @@ body {
   font-size: 2rem;
   color: #aaa;
   margin-bottom: 10px;
-
 }
 
 .step p {
@@ -54,6 +56,7 @@ body {
   color: #555;
 }
 
+/* Cards grid */
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -92,4 +95,48 @@ body {
 .overlay p {
   font-size: 0.85rem;
   line-height: 1.4;
+}
+
+/* 📱 Responsive */
+/* Tablets */
+@media (max-width: 992px) {
+  .steps {
+    flex-direction: column;
+    text-align: center;
+  }
+  .step {
+    padding: 10px 0;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .container {
+    margin: 30px auto;
+  }
+
+  .main-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  .cards {
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
+
+  .overlay {
+    padding: 14px;
+  }
+
+  .overlay h3 {
+    font-size: 1rem;
+  }
+
+  .overlay p {
+    font-size: 0.8rem;
+  }
 }

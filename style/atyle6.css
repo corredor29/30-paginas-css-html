@@ -27,6 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .text-content {
@@ -61,10 +62,13 @@ p {
 
 .image-content {
   position: relative;
+  flex: 1;
 }
 
 img {
   max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .badge {
@@ -81,5 +85,60 @@ img {
 
 footer {
   margin-top: 20px;
-  text-align:justify;
+  text-align: justify;
+}
+
+/* 📱 Responsive */
+/* Tablets */
+@media (max-width: 992px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .order-btn,
+  .explore-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .order-btn,
+  .explore-btn {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .badge {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
 }
