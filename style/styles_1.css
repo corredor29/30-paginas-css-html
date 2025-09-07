@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'AvenirCustom';
+    src: url('../font/Avenir-Regular.ttf') format('truetype'); 
+}
+
+
 body {
         background: #fff;
         color: #333;
