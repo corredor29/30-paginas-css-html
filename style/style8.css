@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #a22c1c; /* rojo oscuro */
+  color: #fff;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10%;
+  min-height: 100vh;
+  gap: 60px;
+}
+
+.hero-images {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  flex-shrink: 0;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: -30rem;
+  width: 37rem;
+  z-index: 1;
+}
+
+.dots {
+  position: absolute;
+  width: 150px;
+  z-index: 2;
+}
+
+.dots-left {
+  top: 0;
+  left: -30rem;
+  width: 50%;
+}
+
+.dots-right {
+  left: -25px;
+  width: 50%;
+  bottom: -8rem;
+}
+
+.man {
+  position: absolute;
+  top: 20px;
+  left: -27rem;
+  width: 150%;
+  z-index: 3;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.4rem, 6vw, 6rem); /* escalable */
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: clamp(1rem, 2vw, 1.3rem); /* escalable */
+  margin-bottom: 30px;
+  color: #f2f2f2;
+}
+
+.btn {
+  padding: 20px 40px;
+  border: none;
+  border-radius: 25px;
+  background: #f2b72f;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #d89f22;
+}
+
+/* 📱 Responsivo */
+/* Tablets */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 40px 5%;
+  }
+
+  .hero-images {
+    width: 300px;
+    height: 380px;
+  }
+
+  .man {
+    left: -18rem;
+    width: 120%;
+  }
+
+  .circle {
+    left: -20rem;
+    width: 25rem;
+  }
+
+  .dots-left {
+    left: -20rem;
+    width: 40%;
+  }
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+  .hero {
+    gap: 30px;
+  }
+
+  .hero-images {
+    width: 260px;
+    height: 320px;
+  }
+
+  .man {
+    left: -12rem;
+    width: 110%;
+  }
+
+  .circle {
+    left: -15rem;
+    width: 20rem;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .hero-images {
+    width: 220px;
+    height: 280px;
+  }
+
+  .man {
+    left: -9rem;
+    width: 100%;
+  }
+
+  .circle {
+    left: -12rem;
+    width: 18rem;
+  }
+
+  .dots-left,
+  .dots-right {
+    display: none; /* se ocultan si molestan en pantallas chicas */
+  }
+}

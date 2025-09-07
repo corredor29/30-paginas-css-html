@@ -1,0 +1,142 @@
+
+@font-face {
+  font-family: 'AvenirCustom';
+  src: url('../font/Avenir-Regular.ttf') format('truetype'); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'AvenirCustom', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.main-title {
+  font-size: clamp(2rem, 5vw, 4rem); /* Escalable */
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+.step {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.step h2 {
+  font-size: 2rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Cards grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  color: #fff;
+  text-align: justify;
+}
+
+.overlay h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.overlay p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* 📱 Responsive */
+/* Tablets */
+@media (max-width: 992px) {
+  .steps {
+    flex-direction: column;
+    text-align: center;
+  }
+  .step {
+    padding: 10px 0;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .container {
+    margin: 30px auto;
+  }
+
+  .main-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  .cards {
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
+
+  .overlay {
+    padding: 14px;
+  }
+
+  .overlay h3 {
+    font-size: 1rem;
+  }
+
+  .overlay p {
+    font-size: 0.8rem;
+  }
+}

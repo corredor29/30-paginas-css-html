@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'AvenirCustom';
+  src: url('../font/Avenir-Regular.ttf') format('truetype'); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'AvenirCustom', sans-serif;
+}
+
+.projects {
+  padding: 4rem 6rem;
+}
+
+.projects-header h2 {
+  font-size: clamp(2.5rem, 5vw, 5rem); /* se ajusta según pantalla */
+  font-weight: 600;
+  margin-bottom: 3rem;
+  line-height: 1.2;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 2rem;
+}
+
+.project-item {
+  text-align: left;
+}
+
+.project-item h3 {
+  font-size: 1.5rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.project-item p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.project-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* mantiene formato cuadrado */
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* 📱 Tablets */
+@media (max-width: 1024px) {
+  .projects {
+    padding: 3rem 2rem;
+  }
+  .projects-header h2 {
+    text-align: center;
+  }
+}
+
+/* 📱 Móviles grandes */
+@media (max-width: 768px) {
+  .projects {
+    padding: 2.5rem 1.5rem;
+  }
+  .projects-header h2 {
+    font-size: 2.2rem;
+  }
+  .project-item {
+    text-align: center;
+  }
+  .project-item p {
+    font-size: 1rem;
+  }
+}
+
+/* 📱 Móviles pequeños */
+@media (max-width: 480px) {
+  .projects {
+    padding: 2rem 1rem;
+  }
+  .projects-header h2 {
+    font-size: 1.8rem;
+  }
+  .project-item h3 {
+    font-size: 1.2rem;
+  }
+  .project-item p {
+    font-size: 0.9rem;
+  }
+}

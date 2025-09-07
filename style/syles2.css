@@ -1,0 +1,119 @@
+/* Regular (400) */
+@font-face {
+  font-family: 'AvenirCustom';
+  src: url('../font/Avenir-Regular.ttf') format('truetype'); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'AvenirCustom';
+  font-weight: 400;
+}
+
+body {
+  background: #fff;
+  color: #111;
+  line-height: 1.6;
+  padding: 4rem;
+   margin: 0 auto;
+   
+}
+
+/* ----- Fila superior ----- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.text-content h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 2rem;
+ 
+}
+
+.btn {
+  padding: 1.rem 2rem;
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+
+/* ----- Fila inferior ----- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  transform: translateY(8rem)
+}
+
+.gallery .item span {
+  display: block;
+  font-size: 1.7rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.gallery img {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .images-top {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+.images-top {
+  width: 100%;          /* que ocupe todo el ancho disponible */
+  border-radius: 12px;
+  object-fit: cover;    
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem; /* corregí el slash (/) que rompía el CSS */
+}
+
+.images-top img:first-child {
+  margin-top: 4rem; 
+  width: 35rem; 
+  transform: translateY(-6rem); /* baja la primera */
+}
+
+.images-top img:last-child {
+  margin-top: 60px; 
+  width: 35rem;  
+  transform: translateY(6rem); /* sube la segunda */
+}
+
