@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #a22c1c; /* rojo oscuro */
+  color: #fff;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10%;
+  min-height: 100vh;
+  gap: 60px;
+}
+
+.hero-images {
+  position: relative;
+  width: 400px;
+  height: 500px;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: -30rem;
+  width: 37rem;
+  z-index: 1;
+}
+
+.dots {
+  position: absolute;
+  width: 150px;
+  z-index: 2;
+}
+
+.dots-left {
+  top: 0;
+  left: -30rem;
+  width: 50%;
+}
+
+.dots-right {
+  bottom: 30px;
+  left: -25px;
+  width: 50%;
+  bottom: -8rem;
+}
+
+.man {
+  position: absolute;
+  top: 20px;
+  left: -27rem;
+  width: 150%;
+  z-index: 3;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 6rem;
+
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: #f2f2f2;
+}
+
+.btn {
+  padding: 20px 40px;
+  border: none;
+  border-radius: 25px;
+  background: #f2b72f;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #d89f22;
+}

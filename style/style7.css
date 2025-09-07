@@ -1,0 +1,95 @@
+
+@font-face {
+  font-family: 'AvenirCustom';
+  src: url('../font/Avenir-Regular.ttf') format('truetype'); 
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'AvenirCustom';
+}
+
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 4rem;
+  font-weight: 600%;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.step {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.step h2 {
+  font-size: 2rem;
+  color: #aaa;
+  margin-bottom: 10px;
+
+}
+
+.step p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  color: #fff;
+  text-align: justify;
+}
+
+.overlay h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.overlay p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
