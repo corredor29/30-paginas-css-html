@@ -1,135 +1,152 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  margin: 0;
+  font-family: "Georgia", serif;
+  background: #f9f9f9;
+  color: #222;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+.adventure {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.left-section, .right-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    position: relative;
+/* -------- Columna izquierda -------- */
+.left h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-.center-section {
-    flex: 1.5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-h1, h2, h3 {
-    font-weight: normal;
-    text-align: center;
-    margin: 0;
-}
-
-h1 {
-    font-size: 2.5em;
-    line-height: 1.2;
-    text-align: left;
-    position: relative;
-}
-
-h2 {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 1.8em;
-    line-height: 1.2;
-}
-
-p {
-    text-align: center;
-    color: #666;
-    margin: 10px 0;
+.left p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    align-self: center;
+  background: #2e6a4a;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
 }
 
 button:hover {
-    background-color: #45a049;
+  background: #244f37;
 }
 
-img {
-    border-radius: 15px;
-    margin: 10px 0;
+.small-images {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* 🔥 así no se desbordan en pantallas pequeñas */
 }
 
-.main-image {
-    width: 27rem;
-    height: auto;
-    position: relative;
-    top: 17rem;
+.small-images img {
+  width: 120px;
+  height: 180px;
+  border-radius: 60px;
+  object-fit: cover;
 }
 
-.top-image, .bottom-image {
-    width: 100%;
-    height: auto;
-    max-height: 150px;
-    object-fit: cover;
+/* -------- Imagen central -------- */
+.center {
+  text-align: center;
+  position: relative;
 }
 
-/* Add stars or other decorative elements as needed */
-.left-section::before, .right-section::before {
-    content: "★";
-    position: absolute;
-    font-size: 1.5em;
-    color: #666;
-    top: 10px;
+.big-img {
+  width: 100%;         
+  max-width: 380px;     
+  height: auto;        
+  display: block;
+  margin: auto;
+  border-radius: 0;    
+  object-fit: contain;  
 }
 
-/* Ajustes añadidos para restaurar todos los elementos */
-.container {
-    min-height: 600px; /* Aumenta la altura mínima para que todos los elementos quepan */
-    width: 80%; /* Define un ancho para evitar que se desborde */
-    max-width: 1200px; /* Límite máximo de ancho */
+.decor-text {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-style: italic;
+  color: #333;
 }
 
-.center-section {
-    position: relative; /* Contexto para .main-image */
-    min-height: 400px; /* Asegura espacio para h2 y main-image */
+/* -------- Columna derecha -------- */
+.right {
+  text-align: left;
 }
 
-.main-image {
-    position: absolute; /* Permite mover la imagen sin colapsar el contenedor */
-    top: 17rem; /* Mantiene tu desplazamiento vertical */
-    left: 50%; /* Centra horizontalmente */
-    transform: translateX(-50%); /* Ajusta para alineación central */
+.right .oval {
+  width: 120px;
+  height: 180px;
+  border-radius: 60px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  display: block;
 }
 
-h1 {
-    margin-left: 0; /* Asegura alineación a la izquierda */
-    visibility: visible; /* Garantiza visibilidad */
+.right p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 1.5rem 0;
 }
 
-h2, h3, p, button {
-    visibility: visible; /* Asegura que todos los textos y botones sean visibles */
+.right h2 {
+  font-size: 2rem;
+  line-height: 1.3;
 }
+
+/* -------- Responsive -------- */
+@media (max-width: 900px) {
+  .adventure {
+    grid-template-columns: 1fr; /* 🔥 columnas en bloque */
+    text-align: center;
+  }
+
+  .left, 
+  .center, 
+  .right {
+    text-align: center; /* Centrado en móvil */
+  }
+
+  .small-images {
+    justify-content: center;
+  }
+
+  .right {
+    margin-top: 2rem;
+  }
+
+  .right .small-images {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .left h1 {
+    font-size: 2rem;
+  }
+
+  .big-img {
+    max-width: 280px; /* 🔥 Más pequeña en móviles */
+  }
+
+  .small-images img,
+  .right .oval {
+    width: 100px;
+    height: 150px;
+    border-radius: 50px;
+  }
+}
+
