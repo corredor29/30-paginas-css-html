@@ -1,0 +1,72 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; font-family: Georgia, serif; }
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    background: url("/image/image_55/fondo.png") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.left {
+    padding: 6rem 4rem;
+    color: #111;
+}
+.left h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+.left p {
+    max-width: 420px;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+.btn {
+    background: #000;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.card {
+    position: absolute;
+    right: 5%;
+    width: 240px;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+}
+
+.card .number {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        background-position: center top;
+    }
+    .left { padding: 2rem; }
+    .card {
+        position: relative;
+        right: auto;
+        width: 100%;
+        margin: 2rem 0;
+    }
+}
