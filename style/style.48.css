@@ -1,0 +1,198 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9c74f; /* Color de fondo general */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita barras de desplazamiento */
+
+    /* Múltiples fondos para posicionar las imágenes */
+    background: url("/image/image_47/Rectangle\ 79.png") no-repeat, /* Imagen de la tableta */
+                url("/image/image_47/Number/i") no-repeat, /* Imagen del teclado */
+                #f9c74f; /* Color de fondo final */
+
+    /* Posiciona la tableta (inferior derecha) y el teclado (inferior izquierda) */
+    background-position: calc(100% - 100px) calc(100% + 150px), /* Tableta, ajusta según necesites */
+                         -200px calc(100% - 100px); /* Teclado, ajusta según necesites */                         
+    background-size: 50% auto, 50% auto; /* Ajusta el tamaño de las imágenes */
+}
+
+/* Contenedor principal para el diseño */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 0;
+    position: relative;
+}
+
+/* Contenido de la parte superior */
+.top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.main-title {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #000;
+}
+
+.digital-oval {
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 0.2rem 1.5rem;
+    margin: 1rem 0;
+}
+
+.digital-text {
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.center-col {
+    align-self: center;
+}
+
+.magnet-icon {
+    width: 100px;
+    display: block;
+}
+
+.right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 1rem;
+}
+
+.item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #252525;
+}
+
+.item-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.item-text p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.item:nth-child(3) .item-text p {
+    color: #888; 
+}
+
+
+/* Contenido del medio: botón y la nueva sección */
+.middle-content {
+    display: flex;
+    justify-content: space-between; /* Alinea el botón a la izquierda y la nueva sección a la derecha */
+    align-items: flex-end; /* Alinea los elementos a la parte inferior de este contenedor */
+    width: 100%;
+    margin-top: auto; /* Empuja este contenido hacia abajo */
+}
+
+.btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #444;
+}
+
+.metrics-social-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea los elementos de esta sección a la derecha */
+    gap: 1rem;
+}
+
+.metrics {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid black; /* Borde para el grupo de números */
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+}
+
+.metrics span {
+    font-size: 1rem; /* Ajuste del tamaño de fuente */
+    font-weight: bold;
+    color: #000;
+    position: relative;
+}
+
+.metrics span:not(:last-child)::after {
+    content: ""; /* Elimina el "|" */
+    border-right: 1px solid #ccc; /* Agrega una línea vertical */
+    height: 15px; /* Altura de la línea */
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.social-section {
+    display: flex;
+    align-items: center; /* Alinea los iconos y el texto curvo en el centro vertical */
+    gap: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #444;
+}
+
+.curved-social-text {
+    transform: rotate(-10deg);
+}
