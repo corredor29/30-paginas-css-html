@@ -28,12 +28,12 @@ body{
 .copy{
   position: relative;
   z-index: 3;
-  margin-left: 10rem;   /* 👈 mueve a la derecha en desktop */
+  margin-left: 10rem;   
 }
 
 .copy h1{
   font-weight: 800;
-  font-size: clamp(2.2rem, 5vw, 6rem); /* 🔥 escalable */
+  font-size: clamp(2.2rem, 5vw, 6rem);
   line-height: 1.1;
   margin-bottom: 16px;
 }
@@ -42,7 +42,7 @@ body{
   color: #222;
   max-width: 650px;
   margin-bottom: 18px;
-  font-size: clamp(1rem, 2.5vw, 1.4rem); /* 🔥 escalable */
+  font-size: clamp(1rem, 2.5vw, 1.4rem); 
 }
 
 .btn{
@@ -111,7 +111,7 @@ body{
   line-height: 1.45;
 }
 
-/* 📱 Responsive */
+
 /* Tablets */
 @media (max-width: 1024px){
   .copy{ margin-left: 4rem; }
